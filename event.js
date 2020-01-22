@@ -1,7 +1,9 @@
 var obj ={
-    greet: 'Hello'
+    name: 'Haluk YILDIZ',
+    greet: function() {
+        console.log(`Hello ${ this.name }`);
+    }
 }
-console.log(obj.greet);
-console.log(obj['greet']);
-var prop ='greet';
-console.log(obj[prop]);
+obj.greet();
+obj.greet.call({name: 'Tuba YILDIZ'});
+obj.greet.apply({name: 'Tuba YILDIZ'});
